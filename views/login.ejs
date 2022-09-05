@@ -1,0 +1,58 @@
+<%- include('partials/_header.ejs') %>
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#"/></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <%- include('partials/_navigation.ejs') %>
+      <!-- end banner -->
+    <div class="back_re">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="title">
+                     <h2>LOgin</h2>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--  contact -->
+      <div class="contact">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6 padding_right0">
+                  <form id="request" class="main_form" action="users/login" method="POST">
+                     <div class="row">
+                        
+                        <div class="col-md-12">
+                           <input class="contactus" placeholder="Email" type="type" name="email"> 
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactus" placeholder="Password" type="type" name="password">                          
+                        </div>
+                        
+                        <div class="col-md-12">
+                           <button class="send_btn">Sign In</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               
+            </div>
+         </div>
+      </div>
+      <!-- end contact -->
+      <!--  footer -->
+      <%- include('partials/_footer.ejs') %>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+   </body>
+</html>

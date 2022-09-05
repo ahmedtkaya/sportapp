@@ -1,0 +1,67 @@
+<%- include('partials/_header.ejs') %>
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#"/></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <%- include('partials/_navigation.ejs') %>
+      <!-- end banner -->
+      <div class="back_re">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="title">
+                       <h2>Our Classes</h2>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- our classes -->
+      <div class="classes">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <div class="titlepage">
+                   
+                     <span>You see Our Classes
+                     </span>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-4 col-sm-6 d_none">
+               </div>
+               
+               <div class="col-md-4 col-sm-6 margin_bott">
+                 <%for (i=0; i < classes.length; i++) { %>
+                  <div class="our_yoga">
+                     <figure><img src="/images/our_yoga1.png" alt="#"/></figure>
+                     <h3><%= classes[i].name %></h3>
+                     <span><%= classes[i].description %></span>
+                  </div>
+                  <%}%>
+               </div>
+               <div class="col-md-4 col-sm-6 d_none">
+               </div>
+               
+               
+               
+            </div>
+         </div>
+      </div>
+      <!-- end our classes -->
+    
+      <!--  footer -->
+      <%- include('partials/_footer.ejs') %>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+   </body>
+</html>
