@@ -1,3 +1,4 @@
+const User = require("../models/User");
 exports.getAboutPage = (req, res) => {
   res.status(200).render("about", {
     page_name: "about",
@@ -19,9 +20,13 @@ exports.getClassesPage = (req, res) => {
     page_name: "classes",
   });
 };*/
-exports.getAddPage = (req, res) => {
+exports.getAddPage = async (req, res) => {
+  const user = await User.findOne({ _id: req.session.userID }).populate(
+    "classes" //add sayfasında userı yakalamak için bunu yazdık
+  );
   res.status(200).render("add", {
     page_name: "add",
+    user,
   });
 };
 exports.getRegisterPage = (req, res) => {

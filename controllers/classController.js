@@ -3,9 +3,14 @@ const User = require("../models/User");
 
 exports.createClass = async (req, res) => {
   try {
-    const clas = await Class.create(req.body);
+    const clas = await Class.create({
+      name: req.body.name,
+      description: req.body.description,
+      price: req.body.price,
+      user: req.session.userID,
+    });
     //coach/classes yap
-    res.status(200).res.redirect("/classes");
+    res.status(200).res.redirect("/users/dashboard");
     req.flash("success", `${clas.title} has been created`);
   } catch (error) {
     req.flash("error", `Something went wrong`);

@@ -1,151 +1,44 @@
-<header class="full_bg">
-   <!-- header inner -->
-   <div class="header">
-      <div class="container-fluid">
-         <div class="row">
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
-               <div class="full">
-                  <div class="center-desk">
-                     <div class="logo">
-                        <a href="/"><img src="images/logo.png" alt="#" /></a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-               <nav class="navigation navbar navbar-expand-md navbar-dark ">
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarsExample04">
-                     <ul class="navbar-nav mr-auto">
-                        <li class="<%= page_name === 'index'&& 'active'%>">
-                           <a class="nav-link" href="/">Home</a>
-                        </li>
-                        <li class="<%= page_name === 'about'&& 'active'%>">
-                           <a class="nav-link" href="/about">About</a>
-                        </li>
-                        <li class="<%= page_name === 'classes'&& 'active'%>">
-                           <a class="nav-link" href="/classes">classes</a>
-                        </li>
-                        <li class="<%= page_name === 'yoga'&& 'active'%>">
-                           <a class="nav-link" href="/yoga">yoga</a>
-                        </li>
-                        <% if(userIN) {%>
-                        <li class="<%= page_name === 'dashboard'&& 'active'%>">
-                           <a class="nav-link" href="/users/dashboard">dashboard</a>
-                        </li>
-                        <%}%>
-                        <li class="<%= page_name === 'contact'&& 'active'%>">
-                           <a class="nav-link" href="/contact">Contact Us</a>
-                        </li>
-                        <% if (!userIN) { %>
-                        <li class="<%= page_name === 'register'&& 'active'%>">
-                           <a class="nav-link" href="/register">Register</a>
-                        </li>
-                        <%}%>
-                        <% if (!userIN) { %>
-                        <li class="<%= page_name === 'login'&& 'active'%>">
-                           <a class="nav-link" href="/login">Login</a>
-                        </li>
-                        <%}%>
-                        <% if(userIN) {%>
-                        <li class="<%= page_name === 'add'&& 'active'%>">
-                           <a class="nav-link" href="/add">Add Class</a>
-                        </li>
-                        <%}%>
-                        <% if(userIN) {%>
-                        <li class="<%= page_name === 'logout'&& 'active'%>">
-                           <a class="nav-link" href="/users/logout">Logout</a>
-                        </li>
-                        <%}%>
-                     </ul>
-                  </div>
-               </nav>
-            </div>
-         </div>
-      </div>
-   </div>
-   <!-- end header inner -->
-   <!-- end header -->
-   <!-- banner -->
-   <section class="banner_main">
-      <div id="myCarousel" class="carousel slide banner" data-ride="carousel">
-         <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-         </ol>
-         <div class="carousel-inner">
-            <div class="carousel-item active">
-               <div class="container">
-                  <div class="carousel-caption  banner_po">
-                     <div class="row">
-                        <div class="col-md-5">
-                           <div class="yo_img">
-                              <figure><img src="images/yo_img.png" alt="#"/></figure>
-                           </div>
-                        </div>
-                        <div class="col-md-7">
-                           <div class="yoga_box">
-                              <span>Now started</span>
-                              <h1> <strong>Y</strong> O <strong>G</strong> A</h1>
-                              <a class="read_more yoga_btn" href="contact.html" role="button">Contact us</a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="carousel-item">
-               <div class="container">
-                  <div class="carousel-caption banner_po">
-                     <div class="row">
-                        <div class="col-md-5">
-                           <div class="yo_img">
-                              <figure><img src="images/yo_img.png" alt="#"/></figure>
-                           </div>
-                        </div>
-                        <div class="col-md-7">
-                           <div class="yoga_box">
-                              <span>Now started</span>
-                              <h1> <strong>Y</strong> O <strong>G</strong> A</h1>
-                              <a class="read_more yoga_btn" href="contact.html" role="button">Contact us</a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="carousel-item">
-               <div class="container">
-                  <div class="carousel-caption banner_po">
-                     <div class="row">
-                        <div class="col-md-5">
-                           <div class="yo_img">
-                              <figure><img src="images/yo_img.png" alt="#"/></figure>
-                           </div>
-                        </div>
-                        <div class="col-md-7">
-                           <div class="yoga_box">
-                              <span>Now started</span>
-                              <h1> <strong>Y</strong> O <strong>G</strong> A</h1>
-                              <a class="read_more yoga_btn " href="contact.html" role="button">Contact us</a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-         <i class="fa fa-arrow-left" aria-hidden="true"></i>
-         <span class="sr-only">Previous</span>
-         </a>
-         <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-         <i class="fa fa-arrow-right" aria-hidden="true"></i>
-         <span class="sr-only">Next</span>
-         </a>
-      </div>
-   </section>
-</header>
+<div class="collapse navbar-collapse" id="navbarsExample04">
+   <ul class="navbar-nav mr-auto">
+      <li class="<%= page_name === 'index'&& 'active'%>">
+         <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="<%= page_name === 'about'&& 'active'%>">
+         <a class="nav-link" href="/about">About</a>
+      </li>
+      <li class="<%= page_name === 'classes'&& 'active'%>">
+         <a class="nav-link" href="/classes">classes</a>
+      </li>
+      <li class="<%= page_name === 'yoga'&& 'active'%>">
+         <a class="nav-link" href="/yoga">yoga</a>
+      </li>
+      <% if(userIN) {%>
+      <li class="<%= page_name === 'dashboard'&& 'active'%>">
+         <a class="nav-link" href="/users/dashboard">dashboard</a>
+      </li>
+      <%}%>
+      <li class="<%= page_name === 'contact'&& 'active'%>">
+         <a class="nav-link" href="/contact">Contact Us</a>
+      </li>
+      <% if (!userIN) { %>
+      <li class="<%= page_name === 'register'&& 'active'%>">
+         <a class="nav-link" href="/register">Register</a>
+      </li>
+      <%}%>
+      <% if (!userIN) { %>
+      <li class="<%= page_name === 'login'&& 'active'%>">
+         <a class="nav-link" href="/login">Login</a>
+      </li>
+      <%}%>
+      <% if(userIN) {%>
+      <li class="<%= page_name === 'add'&& 'active'%>">
+         <a class="nav-link" href="/add">Add Class</a>
+      </li>
+      <%}%>
+      <% if(userIN) {%>
+      <li class="<%= page_name === 'logout'&& 'active'%>">
+         <a class="nav-link" href="/users/logout">Logout</a>
+      </li>
+      <%}%>
+   </ul>
+</div>
