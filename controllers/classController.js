@@ -20,7 +20,7 @@ exports.createClass = async (req, res) => {
 
 exports.getAllClass = async (req, res) => {
   try {
-    const classes = await Class.find();
+    const classes = await Class.find().sort("-createdAt").populate("user");
     res.status(200).render("classes", {
       classes,
       page_name: "classes",
@@ -31,4 +31,19 @@ exports.getAllClass = async (req, res) => {
       error,
     });
   }
+};
+
+exports.getClass = async (req, res) => {
+  try {
+    const onlyclass = await Class.findOne({ slug: req.params.slug }).populate(
+      "user"
+    );
+    const user = await User.findById(req.session.userID);
+
+    res.status(200).render("yoga", {
+      onlyclass,
+      user,
+      page_name: "yoga",
+    });
+  } catch (error) {}
 };

@@ -138,22 +138,20 @@
             <div class="row">
                <div class="col-md-4 col-sm-6 d_none">
                </div>
-               
-               <div class="col-md-4 col-sm-6 margin_bott">
-                 <%for (i=0; i < classes.length; i++) { %>
+               <% for(let i=0;i < classes.length;i++){%>
+               <div class="col-md-4 col-sm-6 margin_top">
                   <div class="our_yoga">
-                     <figure><img src="/images/our_yoga1.png" alt="#"/></figure>
-                     <h3><%= classes[i].name %></h3>
-                     <span><%= classes[i].description %></span>
+                     <figure><img src="images/our_yoga1.png" alt="#"/></figure>
+                    <a href="/classes/<%= classes[i].slug%>"><h3><%=classes[i].name%></h3></a> 
+                     <span><%=classes[i].description%></span>
+                     <p>Coach : <%=classes[i].user.name%></p>
                   </div>
-                  <%}%>
                </div>
+               
                <div class="col-md-4 col-sm-6 d_none">
                </div>
+               <%}%>
                
-               
-               
-            </div>
          </div>
       </div>
       <!-- end our classes -->
@@ -162,11 +160,11 @@
       <%- include('partials/_footer.ejs') %>
       <!-- end footer -->
       <!-- Javascript files-->
-      <script src="js/jquery.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="/js/jquery.min.js"></script>
+      <script src="/js/bootstrap.bundle.min.js"></script>
+      <script src="/js/jquery-3.0.0.min.js"></script>
       <!-- sidebar -->
-      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="js/custom.js"></script>
+      <script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="/js/custom.js"></script>
    </body>
 </html>
