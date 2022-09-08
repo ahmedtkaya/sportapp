@@ -7,4 +7,5 @@ const router = express.Router();
 router.route("/").post(roleMiddleware(["coach"]), classController.createClass);
 router.route("/").get(classController.getAllClass);
 router.route("/:slug").get(classController.getClass);
+router.route("/:slug").delete(classController.deleteClass);
 module.exports = router;

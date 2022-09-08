@@ -31,85 +31,7 @@
          <!-- end header inner -->
          <!-- end header -->
          <!-- banner -->
-         <section class="banner_main">
-            <div id="myCarousel" class="carousel slide banner" data-ride="carousel">
-               <ol class="carousel-indicators">
-                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#myCarousel" data-slide-to="1"></li>
-                  <li data-target="#myCarousel" data-slide-to="2"></li>
-               </ol>
-               <div class="carousel-inner">
-                  <div class="carousel-item active">
-                     <div class="container">
-                        <div class="carousel-caption  banner_po">
-                           <div class="row">
-                              <div class="col-md-5">
-                                 <div class="yo_img">
-                                    <figure><img src="images/yo_img.png" alt="#"/></figure>
-                                 </div>
-                              </div>
-                              <div class="col-md-7">
-                                 <div class="yoga_box">
-                                    <span>Now started</span>
-                                    <h1> <strong>Y</strong> O <strong>G</strong> A</h1>
-                                    <a class="read_more yoga_btn" href="contact.html" role="button">Contact us</a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <div class="container">
-                        <div class="carousel-caption banner_po">
-                           <div class="row">
-                              <div class="col-md-5">
-                                 <div class="yo_img">
-                                    <figure><img src="images/yo_img.png" alt="#"/></figure>
-                                 </div>
-                              </div>
-                              <div class="col-md-7">
-                                 <div class="yoga_box">
-                                    <span>Now started</span>
-                                    <h1> <strong>Y</strong> O <strong>G</strong> A</h1>
-                                    <a class="read_more yoga_btn" href="contact.html" role="button">Contact us</a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <div class="container">
-                        <div class="carousel-caption banner_po">
-                           <div class="row">
-                              <div class="col-md-5">
-                                 <div class="yo_img">
-                                    <figure><img src="images/yo_img.png" alt="#"/></figure>
-                                 </div>
-                              </div>
-                              <div class="col-md-7">
-                                 <div class="yoga_box">
-                                    <span>Now started</span>
-                                    <h1> <strong>Y</strong> O <strong>G</strong> A</h1>
-                                    <a class="read_more yoga_btn " href="contact.html" role="button">Contact us</a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-               <i class="fa fa-arrow-left" aria-hidden="true"></i>
-               <span class="sr-only">Previous</span>
-               </a>
-               <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-               <i class="fa fa-arrow-right" aria-hidden="true"></i>
-               <span class="sr-only">Next</span>
-               </a>
-            </div>
-         </section>
+         
       </header>
       <!-- end banner -->
       <div class="back_re">
@@ -130,8 +52,8 @@
                <div class="col-sm-12">
                   <div class="titlepage">
                    
-                     <span>You see Our Classes
-                     </span>
+                     <h2>You see Our Classes
+                     </h2>
                   </div>
                </div>
             </div>
@@ -142,7 +64,7 @@
                <div class="col-md-4 col-sm-6 margin_top">
                   <div class="our_yoga">
                      <figure><img src="images/our_yoga1.png" alt="#"/></figure>
-                    <a href="/classes/<%= classes[i].slug%>"><h3><%=classes[i].name%></h3></a> 
+                    <a href="/classes/<%= classes[i].slug%>"><h3 style="font-size: 140%"><%=classes[i].name%></h3></a> 
                      <span><%=classes[i].description%></span>
                      <p>Coach : <%=classes[i].user.name%></p>
                   </div>

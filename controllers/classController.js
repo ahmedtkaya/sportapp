@@ -10,11 +10,11 @@ exports.createClass = async (req, res) => {
       user: req.session.userID,
     });
     //coach/classes yap
-    res.status(200).res.redirect("/users/dashboard");
-    req.flash("success", `${clas.title} has been created`);
+    res.status(200).redirect("/add");
+    req.flash("success", `${clas.name} has been created`);
   } catch (error) {
     req.flash("error", `Something went wrong`);
-    res.status(404).redirect("/classes");
+    res.status(404).redirect("/add");
   }
 };
 
@@ -46,4 +46,18 @@ exports.getClass = async (req, res) => {
       page_name: "yoga",
     });
   } catch (error) {}
+};
+
+exports.deleteClass = async (req, res) => {
+  try {
+    const user = await User.findById(req.session.userID);
+    const clas = await Class.findOneAndRemove({ slug: req.params.slug });
+    req.flash("success", `${clas.name} has been removed from ${user.name}`);
+    res.status(200).redirect("/users/dashboard");
+  } catch (error) {
+    res.status(400).json({
+      status: "fail",
+      error,
+    });
+  }
 };

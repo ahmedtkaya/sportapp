@@ -54,17 +54,32 @@
                <div class="col-md-12">
                   <div class="titlepage">
                    
-                     <span>These Are Your Classes</span>
+                     <h2>These Are Your Classes:</h2>
                   </div>
+                  <% if(flashMessages) { %>
+                     <% if(flashMessages.success) { %>
+                        <div class="alert alert-success">
+                           <%= flashMessages.success %>
+                        </div>
+                     
+                     <% } else if (flashMessages.error) { %>
+                        <div class="alert alert-danger">
+                           <%= flashMessages.error %>
+                        </div>
+                     <%}%>
+                  <%}%>
                </div>
                <% for (let i=0;i< coachclasses.length;i++){ %>
                <div class="col-md-4 border-right">
                   <div class="pricing ">
-                     <h4><%=coachclasses[i].name%></h4>
+                     <h4 style="font-size: 150%"><%=coachclasses[i].name%></h4>
                      <h3><span>$</span><%=coachclasses[i].price%></h3>
                      <p><%=coachclasses[i].description%></p>
-                     <a class="read_more dark_bg" href="Javascript:void(0)"> Starte Now</a>
+                     <a class="btn btn-danger" href="/classes/<%= coachclasses[i].slug%>?_method=DELETE"> Delete</a>
+                     <a class="btn btn-primary text-white"> update</a>
+
                   </div>
+                  
                </div>
                <%}%>
             </div>
