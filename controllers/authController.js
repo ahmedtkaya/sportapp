@@ -49,7 +49,7 @@ exports.getDashboardPage = async (req, res) => {
   const user = await User.findOne({ _id: req.session.userID }).populate(
     "classes"
   );
-  const coachclasses = await Class.find({ user: req.session.userID }); //hata alabilirim burada dönüp bak
+  const coachclasses = await Class.find({ user: req.session.userID });
 
   res.status(200).render("dashboard", {
     user,
